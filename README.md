@@ -17,12 +17,11 @@ The tool can be ran in two ways: manually, or as part of the compile step. In bo
 
 This is the most user friendly way once you've set it up, as it works more or less transparently.
 
-1. Install the tool globally by running `npm install -g vmf-tools` in a command prompt
-2. Test that it works by running `vmf-tools` in a command prompt (this should complain about needing a map to work on)
+1. Test that the program is runnable by doing `npx vmf-tools` in a command prompt (this should complain about needing a map to work on)
 3. Go to your Hammer compilation settings (<kbd>F9</kbd>) and enable advanced mode if not already set.
 4. For each mode you want to compile in, do the following:
     1. Add a new command to run [(img)](docs/imgs/setup_comp1.png)
-    2. Enter `vmf-tools` as command and `$path\$file.$ext $path\$file-processed.$ext` as parameters [(img)](docs/imgs/setup_comp2.png)
+    2. Enter `npx vmf-tools` as command and `$path\$file.$ext $path\$file-processed.$ext` as parameters [(img)](docs/imgs/setup_comp2.png)
     3. Make sure the new command is the top-most command and is enabled [(img)](docs/imgs/setup_comp3.png)
     4. In all other commands, replace `$path\file` with `$path\file-processed` [(img)](docs/imgs/setup_comp4.png)
 
