@@ -1,0 +1,24 @@
+{
+  "name": "vmf-tools",
+  "version": "1.0.0",
+  "description": "Various programmatic modifiers for VMF files",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/birjolaxew/vmf-tools.git"
+  },
+  "keywords": [
+    "vmf",
+    "valve",
+    "source-engine",
+    "hammer"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/birjolaxew/vmf-tools/issues"
+  },
+  "homepage": "https://github.com/birjolaxew/vmf-tools",
+  "dependencies": {
+    "vmf-transpiler": "^1.0.0"
+  }
+}
