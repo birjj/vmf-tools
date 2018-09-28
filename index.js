@@ -1,17 +1,20 @@
 // @ts-check
-const fs = require("fs");
 const transpiler = require("vmf-transpiler");
-const entities = require("./utils/entities");
-const RopeUtils = require("./utils/rope");
+const rXmasLights = require("./rules/christmas_lights");
 
-const christmasLights = require("./rules/christmas_lights");
+/**
+ * Processes a VMF
+ * @param {string} vmfSource The VMF to process
+ * @param {object} [config] The configuration object to use
+ * @return {string} The processed VMF source
+ */
+module.exports = function processVMF(vmfSource, config = { rules: {} }) {
+    config.rules = config.rules || {};
+    const json = transpiler.parse(vmfSource, null);
 
-const MAP = "test_rope";
+    // TODO: load config from map if present
 
-const vmf = fs.readFileSync(`./test/${MAP}.vmf`).toString();
-const json = transpiler.parse(vmf, null);
-fs.writeFileSync(`./test/${MAP}.json`, JSON.stringify(json, null, 2));
+    rXmasLights(json, config.rules.christmas_lights);
 
-christmasLights(json);
-
-fs.writeFileSync(`./test/${MAP}_christmas.vmf`, transpiler.compile(json));
+    return transpiler.compile(json);
+}

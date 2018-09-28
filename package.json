@@ -20,5 +20,6 @@
   "homepage": "https://github.com/birjolaxew/vmf-tools",
   "dependencies": {
     "vmf-transpiler": "^1.0.0"
-  }
+  },
+  "bin": "./bin/vmf-tools.js"
 }
