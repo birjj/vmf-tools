@@ -48,7 +48,7 @@ const getColor = (() => {
 /** @type {ChristmasLightsConfig} */
 const DEFAULT_CONFIG = {
     shouldAddLights(start) {
-        return +start.vmft_christmas === 1;
+        return +start.vmft_xmas === 1;
     },
 
     getNumLights(start, end) {
@@ -89,21 +89,21 @@ module.exports = function christmasLights(json, config = {}) {
             const endKeyframe = keyframes[i];
             console.log("[christmas_lights] Calculating for rope", startKeyframe.targetname, startKeyframe.Slack, startKeyframe.Subdiv);
             // if we have already processed the rope (in a previous run on the VMF), skip it
-            if (+startKeyframe.vmft_christmas_processed 
-                    || +startKeyframe.vmft_christmas === 0
-                    || (!config.shouldAddLights(startKeyframe, endKeyframe) && +startKeyframe.vmft_christmas !== 1)) {
+            if (+startKeyframe.vmft_xmas_processed 
+                    || +startKeyframe.vmft_xmas === 0
+                    || (!config.shouldAddLights(startKeyframe, endKeyframe) && +startKeyframe.vmft_xmas !== 1)) {
                 continue;
             }
-            startKeyframe.vmft_christmas_processed = 1;
+            startKeyframe.vmft_xmas_processed = 1;
 
             // the number of lights can be configured in a couple different ways
-            const numLights = startKeyframe.vmft_christmas_numlights !== undefined
-                ? +startKeyframe.vmft_christmas_numlights
+            const numLights = startKeyframe.vmft_xmas_numlights !== undefined
+                ? +startKeyframe.vmft_xmas_numlights
                 : config.getNumLights(startKeyframe, endKeyframe);
 
             // the way we get the entity to insert can also vary a bit
-            const getLightEntity = startKeyframe.vmft_christmas_entity
-                ? pos => entities.getByTargetname(json, startKeyframe.vmft_christmas_entity)
+            const getLightEntity = startKeyframe.vmft_xmas_entity
+                ? pos => entities.getByTargetname(json, startKeyframe.vmft_xmas_entity)
                         .map(ent => entities.clone(ent))
                         .map(ent => {
                             ent.origin = pos.map(v => Math.round(v)).join(" ");

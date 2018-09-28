@@ -9,9 +9,9 @@ You can configure which ropes are processed, how many entities are added to each
 These be configured in Hammer by setting custom keyvalues on the `keyframe_rope`'s. The following keyvalues are recognized:
 
 <dl>
-<dt><code>vmft_christmas</code></dt><dd>If set to <code>1</code>, process the rope. If set to <code>0</code>, don't process the rope even if it would have been otherwise</dd>
-<dt><code>vmft_christmas_numlights</code></dt><dd>If set to a number, the number of lights to add - overrides <code>getNumLights()</code></dd>
-<dt><code>vmft_christmas_entity</code></dt><dd>If set, the name of the entity to add as lights - overrides <code>getLightEntity()</code>. The entity has its origin set to the light position, and has its <code>targetname</code> removed</dd>
+<dt><code>vmft_xmas</code></dt><dd>If set to <code>1</code>, process the rope. If set to <code>0</code>, don't process the rope even if it would have been otherwise</dd>
+<dt><code>vmft_xmas_numlights</code></dt><dd>If set to a number, the number of lights to add - overrides <code>getNumLights()</code></dd>
+<dt><code>vmft_xmas_entity</code></dt><dd>If set, the name of the entity to add as lights - overrides <code>getLightEntity()</code>. The entity has its origin set to the light position, and has its <code>targetname</code> removed</dd>
 </dl>
 
 They can also be configured in the config file:
