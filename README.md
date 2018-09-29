@@ -11,7 +11,7 @@ Currently the following is implemented:
 
 # Usage
 
-The tool can be ran in two ways: manually, or as part of the compile step. In both cases you must install [Node.js](https://nodejs.org/en/), as this is what is used to actually execute the toolset.
+The tool can be ran in two ways: as part of the map compilation, or manually.
 
 ## As part of compilation
 
@@ -30,7 +30,7 @@ Done. Whenever you compile the map it will now automatically be processed.
 
 ## Manually
 
-Run the tool manually, specifying the VMF as the first argument and the output as the second argument (`npx vmf-tools path\to\map.vmf path\to\processed.vmf`).
+Run the tool manually, specifying the VMF as the first argument and the output as the second argument (`vmf-tools.exe path\to\map.vmf path\to\processed.vmf`).
 
 # Configuration
 
