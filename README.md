@@ -24,7 +24,7 @@ This is the most user friendly way once you've set it up, as it works more or le
     2. &#8203;<details><summary>Add a new command, pick the <code>vmf-tools.exe</code> as executable</summary>![](docs/imgs/setup_comp2.png)</details>
     2. &#8203;<details><summary>Enter `$path\$file.$ext $path\$file-processed.$ext` as parameters</summary>![](docs/imgs/setup_comp3.png)</details>
     3. &#8203;<details><summary>Make sure the new command is the top-most command and is enabled</summary>![](docs/imgs/setup_comp4.png)</details>
-    4. &#8203;<details><summary>In all other commands, replace <code>$path\$file</code> with <code>$path\$file-processed</code></summary>![](docs/imgs/setup_comp5.png)</details>
+    4. &#8203;<details><summary>In all other commands, replace <code>$path\\$file</code> with <code>$path\\$file-processed</code></summary>![](docs/imgs/setup_comp5.png)</details>
 
 Done. Whenever you compile the map it will now automatically be processed.
 
