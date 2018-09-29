@@ -21,5 +21,11 @@
   "dependencies": {
     "vmf-transpiler": "^1.0.0"
   },
-  "bin": "./bin/vmf-tools.js"
+  "devDependencies": {
+    "pkg": "^4.3.4"
+  },
+  "bin": "./bin/vmf-tools.js",
+  "scripts": {
+    "build": "pkg . --out-path bin -t node10-win-x64"
+  }
 }

@@ -28,6 +28,8 @@ fs.writeFileSync(
     vmfOut,
     vmfTools(
         fs.readFileSync(vmfIn).toString(),
-        configFile ? require(configFile) : undefined
+        configFile
+            ? require(configFile)
+            : undefined
     )
 );
