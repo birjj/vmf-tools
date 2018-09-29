@@ -17,13 +17,14 @@ The tool can be ran in two ways: manually, or as part of the compile step. In bo
 
 This is the most user friendly way once you've set it up, as it works more or less transparently.
 
-1. Test that the program is runnable by doing `npx vmf-tools` in a command prompt (this should complain about needing a map to work on)
-3. Go to your Hammer compilation settings (<kbd>F9</kbd>) and enable advanced mode if not already set.
-4. For each mode you want to compile in, do the following:
-    1. Add a new command to run [(img)](docs/imgs/setup_comp1.png)
-    2. Enter `npx vmf-tools` as command and `$path\$file.$ext $path\$file-processed.$ext` as parameters [(img)](docs/imgs/setup_comp2.png)
-    3. Make sure the new command is the top-most command and is enabled [(img)](docs/imgs/setup_comp3.png)
-    4. In all other commands, replace `$path\file` with `$path\file-processed` [(img)](docs/imgs/setup_comp4.png)
+1. Download [vmf-tools.exe](bin/vmf-tools.exe)
+2. Go to your Hammer compilation settings (<kbd>F9</kbd>) and enable advanced mode if not already set.
+3. For each mode you want to compile in, do the following:
+    1. [Optional] Copy the configuration configuration [(img)](docs/imgs/setup_comp1.png)
+    2. Add a new command, pick the `vmf-tools.exe` as executable [(img)](docs/imgs/setup_comp2.png)
+    2. Enter `$path\$file.$ext $path\$file-processed.$ext` as parameters [(img)](docs/imgs/setup_comp3.png)
+    3. Make sure the new command is the top-most command and is enabled [(img)](docs/imgs/setup_comp4.png)
+    4. In all other commands, replace `$path\$file` with `$path\$file-processed` [(img)](docs/imgs/setup_comp5.png)
 
 Done. Whenever you compile the map it will now automatically be processed.
 
