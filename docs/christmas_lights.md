@@ -2,7 +2,11 @@
 
 This adds entities along ropes in the map (by default colourful glowing sprites, thus the name "christmas lights").
 
+![](docs/imgs/christmas_lights.png)
+
 ## Configuration
+
+In short: add `vmft_xmas 1` to the ropes you want to put entities on.
 
 You can configure which ropes are processed, how many entities are added to each rope, and which entities are placed. The default is one for every 32 inches the `keyframe_rope`'s are apart and an `env_sprite` of different colors.
 
