@@ -2,7 +2,7 @@
 
 This adds entities along ropes in the map (by default colourful glowing sprites, thus the name "christmas lights").
 
-![](docs/imgs/christmas_lights.png)
+![](imgs/christmas_lights.png)
 
 ## Configuration
 
